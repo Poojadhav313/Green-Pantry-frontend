@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+  <title>Shop</title>
+<style>
+  
+  body{
+    background-color:#a9a7a78c;
+    overflow-x: hidden;
+    
+  }
+  /* ----NAVBAR----- */
+  .nav{
+    padding-left: 25px;
+  }
+  .nav, .nav-left, .nav-right{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .nav-left{
+    margin-right: 1000px
+  }
+  
+  
+  #cart-icon{
+    display: inline-block;
+    margin-left: 15px;
+  }
+  
+  #cart-total{
+    display: block;
+    text-align: center;
+    color:#fff;
+    background-color: red;
+    width: 20px;
+    height: 25px;
+    border-radius: 50%;
+    font-size: 14px;
+  }
+  /* main */
+  .row{
+    margin: 20px 50px
+  }
+  .box-element{
+    box-shadow:hsl(0, 0%, 80%) 0 0 16px;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 10px;
+  }
+  
+  .thumbnail{
+    width: 100%;
+    height: 200px;
+    -webkit-box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);
+      -moz-box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);
+      box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);
+  }
+  
+
+  
+  .btn{
+    border-radius: 0;
+  }
+  
+  .row-image{
+    width: 100px;
+  }
+
+  
+  .cart-row{
+    display: flex;
+      align-items: flex-stretch;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #ececec;
+  
+  }
+
+  
+
+  
+  
+  
+  
+</style>  
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="nav">
+      <div class="nav-left">
+        <a href="#" class="navbar-brand">Green Pantry</a>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="">Store</a>
+          </li> 
+        </ul>
+      </div>
+      <div class="nav-right">
+        <a href="#" class="btn btn-warning">Login</a>
+        <a href="">
+          <img id="cart-icon" src="https://www.freeiconspng.com/thumbs/shopping-cart-icon/red-simple-shopping-cart-icon-12.png" height="30" width="30">
+        </a>
+        <p id="cart-total">0</p>
+      </div>
+    </div>
+  </nav>
+<!-- row 1 -->
+<div class="row">
+  <div class="col-lg-4">
+    <img class="thumbnail" src="https://cdn.shopify.com/s/files/1/0551/1004/1783/products/1jxgAL7avw_800x.jpg?v=1630676190">
+    <div class="box-element">
+      <h6><strong>Eggplant</strong></h6>
+      <hr>
+      <button class="btn btn-outline-secondary add-btn">Add to Cart</button>
+      <h5 style="display: inline-block; float: right;">Rs 50</h5>
+    </div>
+    
+  </div>
+  
+  <div class="col-lg-4">
+    <img class="thumbnail" src="https://www.collinsdictionary.com/images/full/tomato_281240360.jpg" width="60px">
+    <div class="box-element">
+      <h6><strong>Tomato</strong></h6>
+      <hr>
+      <button class="btn btn-outline-secondary add-btn">Add to Cart</button>
+      <h5 style="display: inline-block; float: right;">Rs 50</h5>
+    </div>
+    
+  </div>
+  
+  <div class="col-lg-4">
+    <img class="thumbnail" src="https://adagiointernational.com/wp-content/uploads/2022/03/Broccoli.jpg">
+    <div class="box-element">
+      <h6><strong>Broccoli</strong></h6>
+      <hr>
+      <button class="btn btn-outline-secondary add-btn">Add to Cart</button>
+      <h5 style="display: inline-block; float: right;">Rs 50</h5>
+    </div>
+      
+  </div>
+  <!-- row 2 -->
+</div>
+<div class="row">
+  <div class="col-lg-4">
+    <img class="thumbnail" src="https://www.macmillandictionary.com/external/slideshow/full/141151_full.jpg">
+    <div class="box-element">
+      <h6><strong>Potato</strong></h6>
+      <hr>
+      <button class="btn btn-outline-secondary add-btn">Add to Cart</button>
+      <h5 style="display: inline-block; float: right;">Rs 50</h5>
+    </div>
+    
+  </div>
+  
+  <div class="col-lg-4">
+    <img class="thumbnail" src="data:image/jpeg;base64,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">
+    <div class="box-element">
+      <h6><strong>Lady finger</strong></h6>
+      <hr>
+      <button class="btn btn-outline-secondary add-btn">Add to Cart</button>
+      <h5 style="display: inline-block; float: right;">Rs 50</h5>
+    </div>
+    
+  </div>
+  
+  <div class="col-lg-4">
+    <img class="thumbnail" src="https://www.shutterstock.com/image-photo/green-pepper-isolated-on-white-260nw-1381756703.jpg">
+    <div class="box-element">
+      <h6><strong>Green capsicum</strong></h6>
+      <hr>
+      <button class="btn btn-outline-secondary add-btn">Add to Cart</button>
+      <h5 style="display: inline-block; float: right;">Rs 50</h5>
+    </div>
+      
+  </div>
+</div>
+<!-- row 3 -->
+<div class="row">
+  <div class="col-lg-4">
+    <img class="thumbnail" src="https://www.macmillandictionary.com/external/slideshow/full/151562_full.jpg">
+    <div class="box-element">
+      <h6><strong>Peas</strong></h6>
+      <hr>
+      <button class="btn btn-outline-secondary add-btn">Add to Cart</button>
+      <h5 style="display: inline-block; float: right;">Rs 50</h5>
+    </div>
+    
+  </div>
+  
+  <div class="col-lg-4">
+    <img class="thumbnail" src="http://specialtyproduce.com/sppics/297.png">
+    <div class="box-element">
+      <h6><strong>Spring onion</strong></h6>
+      <hr>
+      <button class="btn btn-outline-secondary add-btn">Add to Cart</button>
+      <h5 style="display: inline-block; float: right;">Rs 50</h5>
+    </div>
+    
+  </div>
+  
+  <div class="col-lg-4">
+    <img class="thumbnail" src="http://cdn.shopify.com/s/files/1/0663/9613/products/franceBeans_9c25dae6-5e71-4e41-9ddd-a23b1ca2d0be_grande.png?v=1659474588">
+    <div class="box-element">
+      <h6><strong>Beans</strong></h6>
+      <hr>
+      <button class="btn btn-outline-secondary add-btn">Add to Cart</button>
+      <h5 style="display: inline-block; float: right;">Rs 50</h5>
+    </div>
+      
+  </div>
+</div>
+ 
+</body>
+</html>
