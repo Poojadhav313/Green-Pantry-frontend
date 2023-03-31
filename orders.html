@@ -1,79 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="main.css">
-  <title>Shop</title>
-</head>
+{% extends  'store/main.html'%}
 
-<body>
-  <nav class="navbarr">
-      <div class="nav-left">
-        <a href="#" class="brand">Green Pantry</a>
-        <ul>
-          <li class="">
-            <a href="shop.html">Store</a>
-          </li> 
-        </ul>
-      </div>
-
-      <div>
-        <a href="">Orders</a>
-        <a href="cart.html">Cart</a>
-        <a href="">Log out</a>
-      </div>
-  </nav>
-
-<body>
-  <br>
-<h1 style="text-align:center  ">Your Orders</h1>
-<a class="btn" style="border: 1px solid black; margin-left: 50px;" href="shop.html">&#x2190; Continue Shopping</a>
-<div class="row" style="min-width:4000px; font-size: 17px;">
-  <div class="coll">
-    <br>
-    <div class="box-element">
-      <div class="cart-row">
+{% block content %}
+<br>
+<h1 class="textCenter">Your Orders</h1>
+<div class="row">
+  <div class="col">
+    <a class="darkBtn" href="{% url 'store_page' %}">&#x2190; Continue Shopping</a>
+    <br><br><br>
+    <div class="boxElement" style="width: 82vw;">
+      <div class="cartRow">
         <div style="flex:2"></div>
         <div style="flex:2"><strong>Product</strong></div>
-        <div style="flex:2"><strong>Date</strong></div>
+        <div style="flex:1; margin-right: 5px"><strong>Date</strong></div>
         <div style="flex:1"><strong>Price</strong></div>
         <div style="flex:1"><strong>Quantity</strong></div>
         <div style="flex:1"><strong>Total</strong></div>
         <div style="flex:1"><strong>Status</strong></div>
       </div>
-      <div class="cart-row">
-        <div style="flex:2"><img class="cartIMG" src="https://www.collinsdictionary.com/images/full/tomato_281240360.jpg" width="110px"></div>
-        <div style="flex:2"><p>10/10/2020</p></div>
-        <div style="flex:2"><p>Tomato (1kg)</p></div>
-        <div style="flex:1"><p>Rs 10</p></div>
-        <div style="flex:1"><p class="quantity">3</p></div>
-        <div style="flex:1"><p>Rs 30</p></div>
-        <div class="order-complete" style="flex:1"><p><strong>Complete</strong></p></div>
-      </div>
-      <div class="cart-row">
-        <div style="flex:2"><img class="cartIMG" src="http://cdn.shopify.com/s/files/1/0663/9613/products/franceBeans_9c25dae6-5e71-4e41-9ddd-a23b1ca2d0be_grande.png?v=1659474588" width="110px"></div>
-        <div style="flex:2"><p>10/10/2020</p></div>
-        <div style="flex:2"><p>Beans (1kg)</p></div>
-        <div style="flex:1"><p>Rs 40</p></div>
-        <div style="flex:1"><p class="quantity">6</p></div>
-        <div style="flex:1"><p>Rs 30</p></div>
-        <div class="order-pending" style="flex:1"><p><strong>Pending</strong></p></div>
-      </div>
-      <div class="cart-row">
-        <div style="flex:2"><img class="cartIMG" src="http://specialtyproduce.com/sppics/297.png" width="110px"></div>
-        <div style="flex:2"><p>10/10/2020</p></div> 
-        <div style="flex:2"><p>Spring onion (1kg)</p></div>
-        <div style="flex:1"><p>Rs 20</p></div>
-        <div style="flex:1"><p class="quantity">1</p></div>
-        <div style="flex:1"><p>Rs 30</p></div>
-        <div class="order-complete" style="flex:1"><p><strong>Complete</strong></p></div>
-      </div>
-      
-    </div>
-  </div>
+      <br>
 
+      <div class="cartRow">
+        <div style="flex:2"><img class="cartIMG" src="https://www.collinsdictionary.com/images/full/tomato_281240360.jpg"></div>
+        <div style="flex:2"><p>Tomato (1 kg)</p></div>
+        <div style="flex:1; margin-right: 20px"><p>15-03-2023</p></div>
+        <div style="flex:1"><p>Rs 15</p></div>
+        <div style="flex:1"><p class="quantity">2</p></div>
+        <div style="flex:1"><p>Rs 30</p></div>
+        <div class="orderPending" style="flex:1"><p><strong>Pending</strong></p></div>
+      </div>
+      <div class="cartRow">
+        <div style="flex:2"><img class="cartIMG" src="https://www.macmillandictionary.com/external/slideshow/full/151562_full.jpg"></div>
+        <div style="flex:2"><p>Peaas (1 kg)</p></div>
+        <div style="flex:1; margin-right: 20px"><p>15-03-2023</p></div>
+        <div style="flex:1"><p>Rs 25</p></div>
+        <div style="flex:1"><p class="quantity">1</p></div>
+        <div style="flex:1"><p>Rs 25</p></div>
+        <div class="orderComplete" style="flex:1"><p><strong>Complete</strong></p></div>
+      </div>
+      <div class="cartRow">
+        <div style="flex:2"><img class="cartIMG" src="http://specialtyproduce.com/sppics/297.png"></div>
+        <div style="flex:2"><p>Spring Onion (1 log)</p></div>
+        <div style="flex:1; margin-right: 20px"><p>10-03-2023</p></div>
+        <div style="flex:1"><p>Rs 10</p></div>
+        <div style="flex:1"><p class="quantity">2</p></div>
+        <div style="flex:1"><p>Rs 20</p></div>
+        <div class="orderComplete" style="flex:1"><p><strong>Complete</strong></p></div>
+      </div>
+
+      
+    </div><br><br>
+  </div>
 </div>
-</body>
-</html>
+{% endblock content %}
