@@ -1,135 +1,138 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="main.css">
-  <title>Shop</title>
-</head>
+{% extends 'store/main.html' %}
+  
+{% block content %}
+  <!-- items -->
+  <div class="row" style="font-size: 23px; width: 85vw">
 
-<body>
-  <nav class="navbarr">
-      <div class="nav-left">
-        <a href="#" class="brand">Green Pantry</a>
-        <ul>
-          <li class="">
-            <a href="">Store</a>
-          </li> 
-        </ul>
+    <div class="col itemCol" id="{{ item.id }}">
+      <img class="thumbnail" src="http://specialtyproduce.com/sppics/297.png">
+      <div class="boxElement">
+        <h6 class="itemName">Spring onion (1 )</h6>
+        <form action="" method="POST">
+          {% csrf_token %}
+          <input style="float:right" type="submit" value="Add to Cart" class="greenBtn">
+        </form>
+        <h5 class="itemPrice"><strong>Rs 20</strong></h5>
       </div>
+      <br>
+    </div>
 
-      <div>
-        <a href="orders.html">Orders</a>
-        <a href="cart.html">Cart</a>
-        <a href="">Log out</a>
+    <div class="col itemCol" id="{{ item.id }}">
+      <img class="thumbnail" src="https://im.pluckk.in/unsafe/1200x0/uploads/960-veggies-img-a00-1600x1200-1200--1200px-8.jpg">
+      <div class="boxElement">
+        <h6 class="itemName">Lady finger (1 kg)</h6>
+        <form action="" method="POST">
+          {% csrf_token %}
+          <input style="float:right" type="submit" value="Add to Cart" class="greenBtn">
+        </form>
+        <h5 class="itemPrice"><strong>Rs 10</strong></h5>
       </div>
-  </nav>
-<!-- row 1 -->
-<div class="row">
-  <div class="coll">
-    <img class="thumbnail" src="https://cdn.shopify.com/s/files/1/0551/1004/1783/products/1jxgAL7avw_800x.jpg?v=1630676190">
-    <div class="box-element">
-      <h6><strong>Eggplant</strong> (1kg)</h6>
-      <hr>
-      <button class="add-btn">Add to Cart</button>
-      <h5 class="price">Rs 50</h5>
+      <br>
     </div>
-    
-  </div>
-  
-  <div class="coll">
-    <img class="thumbnail" src="https://www.collinsdictionary.com/images/full/tomato_281240360.jpg" width="60px">
-    <div class="box-element">
-      <h6><strong>Tomato</strong> (1kg)</h6>
-      <hr>
-      <button class="add-btn">Add to Cart</button>
-      <h5 class="price">Rs 50</h5>
+
+    <div class="col itemCol" id="{{ item.id }}">
+      <img class="thumbnail" src="https://www.collinsdictionary.com/images/full/tomato_281240360.jpg">
+      <div class="boxElement">
+        <h6 class="itemName">Tomato (1 kg)</h6>
+        <form action="" method="POST">
+          {% csrf_token %}
+          <input style="float:right" type="submit" value="Add to Cart" class="greenBtn">
+        </form>
+        <h5 class="itemPrice"><strong>Rs 15</strong></h5>
+      </div>
+      <br>
     </div>
-    
-  </div>
-  
-  <div class="coll">
-    <img class="thumbnail" src="https://adagiointernational.com/wp-content/uploads/2022/03/Broccoli.jpg">
-    <div class="box-element">
-      <h6><strong>Broccoli</strong> (1kg)</h6>
-      <hr>
-      <button class="add-btn">Add to Cart</button>
-      <h5 class="price">Rs 50</h5>
+
+    <div class="col itemCol" id="{{ item.id }}">
+      <img class="thumbnail" src="https://www.macmillandictionary.com/external/slideshow/full/141151_full.jpg">
+      <div class="boxElement">
+        <h6 class="itemName">Potato (1 kg)</h6>
+        <form action="" method="POST">
+          {% csrf_token %}
+          <input style="float:right" type="submit" value="Add to Cart" class="greenBtn">
+        </form>
+        <h5 class="itemPrice"><strong>Rs 25</strong></h5>
+      </div>
+      <br>
     </div>
-      
-  </div>
-  <!-- row 2 -->
-</div>
-<div class="row">
-  <div class="coll">
-    <img class="thumbnail" src="https://www.macmillandictionary.com/external/slideshow/full/141151_full.jpg">
-    <div class="box-element">
-      <h6><strong>Potato (1kg)</strong></h6>
-      <hr>
-      <button class="add-btn">Add to Cart</button>
-      <h5 class="price">Rs 50</h5>
+
+    <div class="col itemCol" id="{{ item.id }}">
+      <img class="thumbnail" src="https://www.macmillandictionary.com/external/slideshow/full/151562_full.jpg">
+      <div class="boxElement">
+        <h6 class="itemName">Peas (1 kg)</h6>
+        <form action="" method="POST">
+          {% csrf_token %}
+          <input style="float:right" type="submit" value="Add to Cart" class="greenBtn">
+        </form>
+        <h5 class="itemPrice"><strong>Rs 15</strong></h5>
+      </div>
+      <br>
     </div>
-    
-  </div>
-  
-  <div class="coll">
-    <img class="thumbnail" src="data:image/jpeg;base64,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">
-    <div class="box-element">
-      <h6><strong>Lady finger (1kg)</strong></h6>
-      <hr>
-      <button class="add-btn">Add to Cart</button>
-      <h5 class="price">Rs 50</h5>
+
+    <div class="col itemCol" id="{{ item.id }}">
+      <img class="thumbnail" src="https://im.pluckk.in/unsafe/1200x0/product_thumbnail/111111200AC/ginger.jpg">
+      <div class="boxElement">
+        <h6 class="itemName">Ginger (50 g)</h6>
+        <form action="" method="POST">
+          {% csrf_token %}
+          <input style="float:right" type="submit" value="Add to Cart" class="greenBtn">
+        </form>
+        <h5 class="itemPrice"><strong>Rs 23</strong></h5>
+      </div>
+      <br>
     </div>
-    
-  </div>
-  
-  <div class="coll">
-    <img class="thumbnail" src="data:image/jpeg;base64,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">
-    <div class="box-element">
-      <h6><strong>Ginger (50gm)</strong></h6>
-      <hr>
-      <button class="add-btn">Add to Cart</button>
-      <h5 class="price">Rs 10</h5>
+
+    <div class="col itemCol" id="{{ item.id }}">
+      <img class="thumbnail" src="https://fitelo.co/wp-content/uploads/2022/05/Website-Pictures-28-1.jpg">
+      <div class="boxElement">
+        <h6 class="itemName">Green chilli (100 g)</h6>
+        <form action="" method="POST">
+          {% csrf_token %}
+          <input style="float:right" type="submit" value="Add to Cart" class="greenBtn">
+        </form>
+        <h5 class="itemPrice"><strong>Rs 15</strong></h5>
+      </div>
+      <br>
     </div>
-      
-  </div>
-</div>
-<!-- row 3 -->
-<div class="row">
-  <div class="coll">
-    <img class="thumbnail" src="https://www.macmillandictionary.com/external/slideshow/full/151562_full.jpg">
-    <div class="box-element">
-      <h6><strong>Peas (1kg)</strong></h6>
-      <hr>
-      <button class="add-btn">Add to Cart</button>
-      <h5 class="price">Rs 50</h5>
+
+    <div class="col itemCol" id="{{ item.id }}">
+      <img class="thumbnail" src="https://cdn.shopify.com/s/files/1/0551/1004/1783/products/1jxgAL7avw_800x.jpg?v=1630676190">
+      <div class="boxElement">
+        <h6 class="itemName">Egg plant (1 kg)</h6>
+        <form action="" method="POST">
+          {% csrf_token %}
+          <input style="float:right" type="submit" value="Add to Cart" class="greenBtn">
+        </form>
+        <h5 class="itemPrice"><strong>Rs 15</strong></h5>
+      </div>
+      <br>
     </div>
-    
-  </div>
-  
-  <div class="coll">
-    <img class="thumbnail" src="http://specialtyproduce.com/sppics/297.png">
-    <div class="box-element">
-      <h6><strong>Spring onion (1)</strong></h6>
-      <hr>
-      <button class="add-btn">Add to Cart</button>
-      <h5 class="price">Rs 50</h5>
+
+    <div class="col itemCol" id="{{ item.id }}">
+      <img class="thumbnail" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQw15mQdR2ToM_mwFdBjVafS-g7i1-gzpRdtA&usqp=CAU">
+      <div class="boxElement">
+        <h6 class="itemName">Cauliflower (1 kg)</h6>
+        <form action="" method="POST">
+          {% csrf_token %}
+          <input style="float:right" type="submit" value="Add to Cart" class="greenBtn">
+        </form>
+        <h5 class="itemPrice"><strong>Rs 15</strong></h5>
+      </div>
+      <br>
     </div>
-    
-  </div>
-  
-  <div class="coll">
-    <img class="thumbnail" src="http://cdn.shopify.com/s/files/1/0663/9613/products/franceBeans_9c25dae6-5e71-4e41-9ddd-a23b1ca2d0be_grande.png?v=1659474588">
-    <div class="box-element">
-      <h6><strong>Beans (1kg)</strong></h6>
-      <hr>
-      <button class="add-btn">Add to Cart</button>
-      <h5 class="price">Rs 50</h5>
+
+    <div class="col itemCol" id="{{ item.id }}">
+      <img class="thumbnail" src="http://cdn.shopify.com/s/files/1/0663/9613/products/franceBeans_9c25dae6-5e71-4e41-9ddd-a23b1ca2d0be_grande.png?v=1659474588">
+      <div class="boxElement">
+        <h6 class="itemName">Beans (1 kg)</h6>
+        <form action="" method="POST">
+          {% csrf_token %}
+          <input style="float:right" type="submit" value="Add to Cart" class="greenBtn">
+        </form>
+        <h5 class="itemPrice"><strong>Rs 35</strong></h5>
+      </div>
+      <br>
     </div>
-      
+
   </div>
-</div>
- <br><br>
-</body>
-</html>
+{% endblock %}
