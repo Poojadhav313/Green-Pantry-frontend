@@ -1,73 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="main.css">
-  <title>Shop</title>
-</head>
+{% extends  'store/main.html'%}
 
-<body>
-  <nav class="navbarr">
-      <div class="nav-left">
-        <a href="#" class="brand">Green Pantry</a>
-        <ul>
-          <li class="">
-            <a href="shop.html">Store</a>
-          </li> 
-        </ul>
+{% block content %}
+<br>
+<h1 class="textCenter">Your Cart</h1>
+<div class="row">
+  <div class="col" style="width: 84vw;">
+    <a class="darkBtn" href="{% url 'store_page' %}">&#x2190; Continue Shopping</a>
+    <br><br><br>
+    <div class="boxElement">
+      <div class="cartRow">
+        <div>
+          <h3 style="margin-left: 20px;">Review Cart</h3>
+        </div>
+      </div> 
+
+      <div class="cartRow">
+        <div style="flex:2"><img class="cartIMG" src="https://www.collinsdictionary.com/images/full/tomato_281240360.jpg"></div>
+        <div style="flex:5">
+          <p><strong>Tomato</strong> (1 kg)</p>
+          <p style="font-weight: bolder; font-size: 18px">Rs 15</p>
+        </div>
+        <div style="flex:1"><p>+ 2 -</p></div>
       </div>
 
-      <div>
-        <a href="orders.html">Orders</a>
-        <a href="">Cart</a>
-        <a href="">Log out</a>
+      <div class="cartRow">
+        <div style="flex:2"><img class="cartIMG" src="https://cdn.shopify.com/s/files/1/0551/1004/1783/products/1jxgAL7avw_800x.jpg?v=1630676190"></div>
+        <div style="flex:5">
+          <p><strong>Egg plant</strong> (1 kg)</p>
+          <p style="font-weight: bolder; font-size: 18px">Rs 15</p>
+        </div>
+        <div style="flex:1"><p>+ 2 -</p></div>
       </div>
-  </nav>
 
-<body>
-  <br>
-<h1 style="text-align:center  ">Your Cart</h1>
-<a class="btn" style="border: 1px solid black; margin-left: 50px;" href="shop.html">&#x2190; Continue Shopping</a>
-<div class="row" style="min-width:4000px; font-size: 17px;">
-  <div class="coll">
-    <br>
-    <div class="box-element">
-      <div class="cart-row">
-        <div style="flex:2"></div>
-        <div style="flex:2"><strong>Product</strong></div>
-        <div style="flex:1"><strong>Price</strong></div>
-        <div style="flex:1"><strong>Quantity</strong></div>
-        <div style="flex:1"><strong>Total</strong></div>
-      </div>
-      <div class="cart-row">
-        <div style="flex:2"><img class="cartIMG" src="https://www.collinsdictionary.com/images/full/tomato_281240360.jpg" width="110px"></div>
-        <div style="flex:2"><p>Tomato (1kg)</p></div>
-        <div style="flex:1"><p>Rs 10</p></div>
-        <div style="flex:1"><p class="quantity">3</p></div>
-        <div style="flex:1"><p>Rs 30</p></div>
-      </div>
-      <div class="cart-row">
-        <div style="flex:2"><img class="cartIMG" src="http://cdn.shopify.com/s/files/1/0663/9613/products/franceBeans_9c25dae6-5e71-4e41-9ddd-a23b1ca2d0be_grande.png?v=1659474588" width="110px"></div>
-        <div style="flex:2"><p>Beans (1kg)</p></div>
-        <div style="flex:1"><p>Rs 40</p></div>
-        <div style="flex:1"><p class="quantity">6</p></div>
-        <div style="flex:1"><p>Rs 30</p></div>
-      </div>
-      <div class="cart-row">
-        <div style="flex:2"><img class="cartIMG" src="http://specialtyproduce.com/sppics/297.png" width="110px"></div>
-        <div style="flex:2"><p>Spring onion (1kg)</p></div>
-        <div style="flex:1"><p>Rs 20</p></div>
-        <div style="flex:1"><p class="quantity">1</p></div>
-        <div style="flex:1"><p>Rs 30</p></div>
-      </div>
-      
-      
+
+      <h5 class="priceTotal">Total : Rs 1050</h5>
+      <a style="float:right; margin-top: 30px;"class="greenBtn" href="{% url 'checkout0_page' %}">Checkout</a>
+            
+            
     </div>
-    <a class="btn" style="border: 1px solid black; float: right; margin-top: 30px;" href="">Checkout</a>
   </div>
-
 </div>
-</body>
-</html>
+{% endblock content %}
