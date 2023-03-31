@@ -1,0 +1,66 @@
+{% extends  'store/main.html'%}
+
+{% block content %}
+<br>
+<h1 class="textCenter">Checkout</h1>
+<div class="row checkoutFlex">
+  <div class="col ">
+    <a class="darkBtn" href="{% url 'cart_page' %}">&#x2190; Back to cart</a>
+    <br>
+    <br>
+    <div class="boxElement shippingInfo">
+      <form id="form" action="/checkout" method="POST">
+        {% csrf_token %}
+        <div>
+          <h2 class="textCenter">Shipping Info</h2><hr><br>
+          
+          <div>
+            <input class="formInput" type="text" name="add" placeholder="address" required>
+          </div><br>
+          <div>
+            <input class="formInput" type="text" name="city" placeholder="city" required>
+          </div><br>
+          <div>
+            <input class="formInput" type="text" name="state" placeholder="state" required>
+          </div><br>
+          <br>
+
+        </div>
+        <input class="greenBtn" type="submit" value="Continue">
+
+      </form>
+
+    </div>
+  </div>
+  
+  <div class="col">
+    <br>
+    <br><br>
+    <div class="boxElement orderSummary">
+      <h2 class="textCenter">Order Summary</h2>
+      <hr>
+
+      <div class="cartRow">
+        <div style="flex:2"><img class="checkoutIMG" src="https://www.collinsdictionary.com/images/full/tomato_281240360.jpg"></div>
+        <div style="flex:2">
+          <p>Tomato (1 kg)</p>
+          <p><strong>Rs 15</strong></p>
+        </div>
+        <div style="flex:1"><p>x2</p></div>
+      </div>
+
+      <div class="cartRow">
+        <div style="flex:2"><img class="checkoutIMG" src="https://cdn.shopify.com/s/files/1/0551/1004/1783/products/1jxgAL7avw_800x.jpg?v=1630676190"></div>
+        <div style="flex:2">
+          <p>Egg plant (1 kg)</p>
+          <p><strong>Rs 10</strong></p>
+        </div>
+        <div style="flex:1"><p>x1</p></div>
+      </div>
+
+       <h4 style="text-align:right; margin-right: 50px;">Total :   Rs 1050</h4> 
+    </div>
+</div>
+</div>
+
+{% endblock content %}
